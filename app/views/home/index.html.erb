@@ -1,8 +1,7 @@
 <ul>
   <% if moussaillon_signed_in? %>
       <li>
-      <li>
-        <%= current_moussaillon.email %>
+        <%= current_moussaillon.username %>
       </li>
       <li>
         <%= link_to "Edit Account", edit_moussaillon_registration_path %>
