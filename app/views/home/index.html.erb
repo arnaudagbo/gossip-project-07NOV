@@ -1,0 +1,20 @@
+<ul>
+  <% if moussaillon_signed_in? %>
+      <li>
+      <li>
+        <%= current_moussaillon.email %>
+      </li>
+      <li>
+        <%= link_to "Edit Account", edit_moussaillon_registration_path %>
+      </li>
+      <%= link_to "SignOut", destroy_moussaillon_session_path, method: :delete %>
+      </li>
+  <% else %>
+      <li>
+        <%= link_to "Sign in", new_moussaillon_session_path %>
+      </li>
+      <li>
+        <%= link_to "Sign up", new_moussaillon_registration_path %>
+      </li>
+  <% end %>
+</ul>
